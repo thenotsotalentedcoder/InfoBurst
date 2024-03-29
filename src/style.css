@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    /*background-color: #292524;*/
+    background: radial-gradient(circle, #c3c6d3, #222831);
+    color: #fafaf9;
+    font-family: "Sono", sans-serif;
+    padding: 48px 64px 0px;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.message{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+#root{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.header{
+    margin-bottom: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img{
+    width: 68px;
+    height: 68px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+}
+
+@media (max-width: 900px) {
+    .main{
+        grid-template-columns: 1fr;
+    }    
+}
+
+
+
+h1{
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    margin-top: 6px;
+}
+
+.Category{
+    margin-bottom: 16px;
+}
+
+.fact{
+    font-size: 20px;
+    line-height: 1.4;
+    /*background-color: #44403c;*/
+    background: linear-gradient(to right, #222831, #31363F);
+    margin-bottom: 16px;
+    padding: 16px 24px;
+    letter-spacing: -1px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+}
+
+@media (max-width: 1200px) {
+    .fact{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+    }
+}
+
+.tag{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Coiny", sans-serif;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+}
+
+.fact .tag {
+    color: #ffffff; /* This sets the font color to white */
+    border-color: #010107;
+  }
+  
+
+
+.vote-buttons{
+    margin-left: auto;
+    flex-shrink: 0;
+    
+    display: flex;
+    gap: 8px;
+}
+
+.vote-buttons button{
+    border: none;
+    background-color: #222831;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vote-buttons button:hover{
+    background-color: #93cdee;
+}
+
+.vote-buttons button:disabled{
+    background-color: #222831;
+}
+
+
+ul{
+    list-style: none;
+}
+
+.Source:link, .Source:visited{
+    color: #a8a29e;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+.Source:hover, .source:active{
+    color: #3b82f6;
+}
+
+.btn{
+    border: none;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg, #132043, #1F4172, #132043, #132043);
+    color: inherit;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(110%) rotate(-2deg);
+}
+
+
+.btn-large{
+    font-size: 20px;
+    padding: 20px 32px 17px;
+}
+
+.btn-all-categories{
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.btn-category{
+    width: 100%;
+    background-image: none;
+}
+
+.fact-form{
+    background-color: #0c0a24;
+    margin-bottom: 40px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.fact-form input, .fact-form select{
+    width: 220px;
+    background-color: #000311;
+    border: none;
+    border-radius: 100px;
+    padding: 16px;
+    font-size: 18px;
+    color: inherit;
+    font-family: inherit;
+}
+
+.fact-form input ::placeholder{
+    color: #e2dbd7;
+}
+
+.fact-form input:first-child{
+    flex-grow: 1;
+}
+
+.fact-form span{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+    body{
+        padding: 32px 48px;
+    }
+
+    .fact-form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fact-form input, .fact-form select{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  /* Styles for screens smaller than 600px */
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input, .fact-form select {
+    width: auto;
+  }
+
+  .facts-list {
+    padding: 0;
+  }
+
+  .fact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vote-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
+
